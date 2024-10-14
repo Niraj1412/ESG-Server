@@ -5,7 +5,7 @@ const connectDB = require('./config/db');
 const esgRoutes = require('./routes/esgRoutes');
 const nlpRoutes = require('./routes/nlpRoutes');
 const errorHandler = require('./middleware/errorHandler');
-const cors = require('cors'); 
+const cors = require('cors');
 
 dotenv.config();
 connectDB();
@@ -14,7 +14,7 @@ const app = express();
 
 // Enable CORS
 app.use(cors({
-  origin: 'https://esg-data-analysis.netlify.app/', // Allow only frontend requests
+  origin: 'https://esg-data-analysis.netlify.app', // Allow only frontend requests (without trailing slash)
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Include 'OPTIONS' for preflight requests
   allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
 }));
