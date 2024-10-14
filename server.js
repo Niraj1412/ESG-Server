@@ -14,7 +14,7 @@ const app = express();
 
 // Enable CORS
 app.use(cors({
-  origin: 'http://localhost:3000', // Allow only frontend requests
+  origin: 'https://esg-data-analysis.netlify.app/', // Allow only frontend requests
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Include 'OPTIONS' for preflight requests
   allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
 }));
